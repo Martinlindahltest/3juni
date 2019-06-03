@@ -1,34 +1,43 @@
-import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-function App() {
-  return (
-    <div className="App">
+import React, { Component } from 'react'
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 border p-2">
-      <div class="kort mx-auto"></div>
-    </div>
-
-    <div class="col-sm-6 border p-2">
-      <div class="kort mx-auto"></div>
-    </div>
-
-    <div class="col-sm-6 border p-2">
-      <div class="kort mx-auto"></div>
-    </div>
-
-    <div class="col-sm-6 border p-2">
-      <div class="kort mx-auto"></div>
-    </div>
-
-  </div>
-</div>     
-</div>
-  );
+export default class App extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+  }
+  
 }
 
-export default App;
+  
+  render() {
+    return (
+      <div className="App">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 border p-2">
+            <div class="kort mx-auto">{this.state.name}</div>
+          </div>
+      
+          <div class="col-sm-6 border p-2">
+            <div class="kort mx-auto"></div>
+          </div>
+      
+          <div class="col-sm-6 border p-2">
+            <div class="kort mx-auto"></div>
+          </div>
+      
+          <div class="col-sm-6 border p-2">
+            <div class="kort mx-auto"></div>
+          </div>
+      
+        </div>
+      </div>     
+      </div>
+    )
+  }
+}
