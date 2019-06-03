@@ -9,18 +9,22 @@ function App() {
 
 <div class="container">
   <div class="row">
-    <div class="col-sm border">
-      One of three columns
+    <div class="col-sm-6 border p-2">
+      <div class="kort mx-auto"></div>
     </div>
-    <div class="col-sm border" >
-      One of three columns
+
+    <div class="col-sm-6 border p-2">
+      <div class="kort mx-auto"></div>
     </div>
-    <div class="col-sm border">
-      One of three columns
+
+    <div class="col-sm-6 border p-2">
+      <div class="kort mx-auto"></div>
     </div>
-    <div class="col-sm border">
-      One of three columns
+
+    <div class="col-sm-6 border p-2">
+      <div class="kort mx-auto"></div>
     </div>
+
   </div>
 </div>     
 </div>
