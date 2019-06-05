@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Testredux from './components/Testredux'
+import Db from './Db'
 
 
 import React, { Component } from 'react'
@@ -18,7 +19,7 @@ constructor(props) {
     return (
       <div className="App">
         <Testredux />
-
+      
       <div class="container">
         <div class="row">
           <div class="col-6 col-md-3 border p-2">
@@ -39,6 +40,8 @@ constructor(props) {
       
         </div>
       </div>     
+      <Db />
+
       </div>
     )
   }
