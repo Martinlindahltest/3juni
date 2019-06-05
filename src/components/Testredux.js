@@ -4,9 +4,15 @@ import { connect } from 'react-redux'
  function Testredux(props) {
      console.log(props)
      props.deletePosts('från testredux')
+
+    const propstojsx = props.posts.map(obj => {
+        return <p key={obj.id}>{obj.title}</p>
+    })
+
     return (
         <div>
             testredux
+            {propstojsx}
         </div>
     )
 }
