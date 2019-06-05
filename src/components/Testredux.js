@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
      props.deletePosts('från testredux')
 
     const propstojsx = props.posts.map(obj => {
-        return <p key={obj.id}>{obj.title}</p>
+        return <p key={obj.id}>{obj.body}</p>
     })
 
     return (
