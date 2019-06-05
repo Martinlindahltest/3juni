@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Testredux from './components/Testredux'
-import Db from './Db'
 
 
 import React, { Component } from 'react'
@@ -40,7 +39,6 @@ constructor(props) {
       
         </div>
       </div>     
-      <Db />
 
       </div>
     )
