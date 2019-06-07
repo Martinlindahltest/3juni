@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 
  function Testredux(props) {
-     console.log(props)
+     console.log('props kommer in i testaredux', props)
      props.deletePosts('från testredux')
 
-    const propstojsx = props.posts.map(obj => {
+    const propstojsx = props.state.project.posts.map(obj => {
         return <p key={obj.id}>{obj.body}</p>
     })
 
@@ -18,8 +18,9 @@ import { connect } from 'react-redux'
 }
 
 const mapStateToProps = (state) => ({
-    posts: state.posts
+    state: state
 })
+
 
 const mapDispatchToProps = (dispatch) => {
     return {
