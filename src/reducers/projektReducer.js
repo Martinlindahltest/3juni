@@ -1,3 +1,6 @@
+//import firebase from '../fbConfig'
+
+//onsole.log(firebase)
 
 const initState  = {
     posts: [
@@ -7,7 +10,20 @@ const initState  = {
     ]
 }
 
+//initState.posts[0].body = 'jag har ändrat i projekt reducer'
+
+//const db = firebase
+
+
+
+
+
 const projektReducer = (state = initState, action) => {
+    console.log('nu körs project reducer ')
+    if(action.type === 'DATABAS'){
+        console.log(action.payload)
+    }
+
     return state
 }
 

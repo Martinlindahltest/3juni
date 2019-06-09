@@ -1,13 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import * as actionCreator from "../actions/actions"
 
  function Testredux(props) {
-     console.log('props kommer in i testaredux', props)
-     props.deletePosts('från testredux')
+     //console.log('props kommer in i testaredux', props)
+     //props.deletePosts('från testredux')
 
-    const propstojsx = props.state.project.posts.map(obj => {
+    const propstojsx = props.projectPosts.map(obj => {
         return <p key={obj.id}>{obj.body}</p>
     })
+    
+    props.hämtafråndatabas();
 
     return (
         <div>
@@ -18,14 +21,14 @@ import { connect } from 'react-redux'
 }
 
 const mapStateToProps = (state) => ({
-    state: state
+    projectPosts: state.project.posts
 })
 
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        deletePosts: (input) => {
-            dispatch({type: 'CONSOLE_LOG', payload: input})
+        hämtafråndatabas: (input) => {
+            dispatch(actionCreator.databas('hejhej'))
         }
     }    
 }
