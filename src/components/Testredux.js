@@ -6,11 +6,13 @@ import * as actionCreator from "../actions/actions"
      //console.log('props kommer in i testaredux', props)
      //props.deletePosts('från testredux')
 
+     props.hämtafråndatabas();
+
+
     const propstojsx = props.projectPosts.map(obj => {
         return <p key={obj.id}>{obj.body}</p>
     })
     
-    props.hämtafråndatabas();
 
     return (
         <div>
