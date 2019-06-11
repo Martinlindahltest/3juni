@@ -19,14 +19,15 @@ const initState  = {
 
 
 const projektReducer = (state = initState, action) => {
-    const newState = {...state}
+    const newState = Object.assign(state)
     if(action.type === 'DATABAS'){
         //console.log(action.payload)
         newState.posts[0].body = action.payload
         //console.log(newState.posts[0].body)
+        console.log('nu körs project reducer ', newState)
 
     }
-    console.log('nu körs project reducer ', newState)
+
     return newState
 }
 
