@@ -25,8 +25,7 @@ let Row4 = [13, 14, 15, 16]
         <div className="Spelplan">
   <div>{props.helaState.project.posts[0].body}</div>
 <button onClick={props.hämtafråndatabas}>jag kör dispach</button>
-{console.log(props.apiData[0])}
-  <div>{props.helaState.project.posts[0].body}</div>
+{console.log(props.helaState.project.posts)}
 
 
       <div class="container">

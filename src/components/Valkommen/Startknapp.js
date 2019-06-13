@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Grattis() {
+export default function Startknapp() {
     return (
         <div>
-            Grattis Placeholder
+            Startknapp placeholder
         </div>
     )
 }
