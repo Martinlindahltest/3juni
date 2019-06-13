@@ -1,4 +1,3 @@
-export var jedi = 'initjedi'
 
 
 export const databasAsync = (input) => {
@@ -18,7 +17,7 @@ export const databas = () => {
             return response.json()})
         .then(function(myJsonVariabel) {
       
-      console.log(myJsonVariabel.name)
+      console.log(myJsonVariabel.name);
       dispach(databasAsync(myJsonVariabel.name))
   })
 
