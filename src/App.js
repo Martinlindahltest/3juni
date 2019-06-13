@@ -11,7 +11,7 @@ let VilkenVy = <Spelplan />
 if(true){
   VilkenVy = <Spelplan />
 }
-if(false){
+if(true){
   VilkenVy = <Valkommen />
 }
 if(false){

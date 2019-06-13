@@ -2,7 +2,8 @@
 const initState  = {
     apiData: [
         {id: 1, apiData: 'ej från api'},
-    ], 
+    ],
+    apiFetchKlar: false,
     applicationView: 'valkommen', 
     hurMangaPar: 4
 }

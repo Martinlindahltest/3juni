@@ -5,9 +5,30 @@ import { connect } from 'react-redux'
 import * as actionCreator from "../../actions/actions"
 
 
-function Valkommen() {
+function Valkommen(props) {
+    
+    if(props.helaState.project.posts[0].body === 'Luke Skywalker'){
+
+    }
+    else {
+        props.hämtafråndatabas()
+
+    }
+    let Startknappklar = props.memoryApi.apiFetchKlar
+
+    if(false){
+        //Startknappklar = true
+    }
+    console.log('Startknappklar', Startknappklar)
+
+
     return (
         <div>
+  <div>{props.helaState.project.posts[0].body}</div>
+  <button onClick={props.hämtafråndatabas}>jag kör dispach</button>
+
+
+
             <h6>välkommen</h6>
             <Antalpar />
             <Startknapp />
@@ -18,7 +39,7 @@ function Valkommen() {
 const mapStateToProps = (state) => ({
     //projectPosts: state
     helaState: state,
-    apiData: state.memoryApi.apiData  
+    memoryApi: state.memoryApi  
   })
   
   
