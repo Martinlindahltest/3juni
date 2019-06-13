@@ -11,10 +11,16 @@ const initState  = {
 
 const memoryApiReducer = (state = initState, action) => {
     const newState = {...state}
-    if(action.type === ''){
-        
-
-    }
+    switch(action.type) {
+        case 'FETCH':
+          // code block
+          newState.apiData[0].apiData = action.payload
+          newState.apiFetchKlar = true
+          console.log('MEMORY-API-REDUCER-FETCH + ACTION.TYPE', action.type)
+          break;
+        default:
+            console.log('MEMORY-API-REDUCER-DEFAULT ', action.type)
+      }
 
     return newState
 }

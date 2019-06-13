@@ -1,4 +1,4 @@
-
+/*
 
 export const databasAsync = (input) => {
     //jedi = input
@@ -23,3 +23,5 @@ export const databas = () => {
 
     }
 }
+
+*/

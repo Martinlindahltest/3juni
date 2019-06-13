@@ -1,4 +1,4 @@
-import projektReducer from './projektReducer'
+//import projektReducer from './projektReducer'
 import memoryApiReducer from './memoryApiReducer'
 import { combineReducers } from 'redux';
 //import { firebaseReducer } from 'react-redux-firebase'
@@ -9,7 +9,7 @@ import { combineReducers } from 'redux';
 
 
 const rootReducer = combineReducers({
-    project: projektReducer,
+    //project: projektReducer,
     memoryApi: memoryApiReducer
     //firebase: firebaseReducer,
     //firestore: firestoreReducer

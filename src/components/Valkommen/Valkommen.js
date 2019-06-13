@@ -2,12 +2,12 @@ import React from 'react'
 import Antalpar from './Antalpar'
 import Startknapp from './Startknapp'
 import { connect } from 'react-redux'
-import * as actionCreator from "../../actions/actions"
+import * as actionCreator from "../../actions/memoryActions"
 
 
 function Valkommen(props) {
     
-    if(props.helaState.project.posts[0].body === 'Luke Skywalker'){
+    if(props.memoryApi.apiData[0].apiData === 'Luke Skywalker'){
 
     }
     else {
@@ -24,8 +24,7 @@ function Valkommen(props) {
 
     return (
         <div>
-  <div>{props.helaState.project.posts[0].body}</div>
-  <button onClick={props.hämtafråndatabas}>jag kör dispach</button>
+  <div>{props.memoryApi.apiData[0].apiData}</div>
 
 
 
@@ -46,7 +45,7 @@ const mapStateToProps = (state) => ({
   const mapDispatchToProps = (dispatch) => {
     return {
         hämtafråndatabas: () => {
-            dispatch(actionCreator.databas())
+            dispatch(actionCreator.apiFetch())
         }
     }    
   }
