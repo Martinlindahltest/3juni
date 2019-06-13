@@ -2,7 +2,7 @@ export var jedi = 'initjedi'
 
 
 export const databasAsync = (input) => {
-    jedi = input
+    //jedi = input
     console.log('nu körs databasAsync action', input)
     return {type: 'DATABAS', payload: input}
 }

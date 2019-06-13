@@ -1,6 +1,5 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Testredux from './components/Testredux'
 import { connect } from 'react-redux'
 import * as actionCreator from "./actions/actions"
 
@@ -20,7 +19,6 @@ import React from 'react'
   <div>{props.projectPosts.project.posts[0].body}</div>
 <button onClick={props.hämtafråndatabas}>jag kör dispach</button>
 
-      
       <div class="container">
         <div class="row">
           <div class="col-6 col-md-3 border p-2">

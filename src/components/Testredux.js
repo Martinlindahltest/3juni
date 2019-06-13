@@ -35,7 +35,7 @@ console.log('detta ska bli luke', props.projectPosts[0].body)
 }
 
 const mapStateToProps = (state) => ({
-    projectPosts: state.project.posts 
+    projectPosts: state
 })
 
 

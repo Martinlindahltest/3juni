@@ -14,12 +14,8 @@ const initState  = {
 
 //const db = firebase
 
-
-
-
-
 const projektReducer = (state = initState, action) => {
-    const newState = Object.assign(state)
+    const newState = {...state}
     if(action.type === 'DATABAS'){
         //console.log(action.payload)
         newState.posts[0].body = action.payload
