@@ -11,6 +11,7 @@ export const fetchAsync = (input) => {
 export const apiFetch = () => {
     return dispach => {
         console.log('nu körs FECH sync action')
+        
 
         fetch('https://swapi.co/api/people/1')
         .then(function(response) {
