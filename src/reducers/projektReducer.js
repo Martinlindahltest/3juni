@@ -4,7 +4,7 @@
 
 const initState  = {
     posts: [
-        {id: 1, title: 'tata1', body: 'zazaza 1'},
+        {id: 1, title: 'tata1', body: 'stststs 1'},
         {id: 2, title: 'tata2', body: 'baba 2'},
         {id: 3, title: 'tata3', body: 'baba 3'}
     ]
