@@ -1,7 +1,8 @@
 import projektReducer from './projektReducer'
+import memoryApiReducer from './memoryApiReducer'
 import { combineReducers } from 'redux';
-import { firebaseReducer } from 'react-redux-firebase'
-import { firestoreReducer } from 'redux-firestore'
+//import { firebaseReducer } from 'react-redux-firebase'
+//import { firestoreReducer } from 'redux-firestore'
 //import { firestore } from 'firebase';
 
 //console.log('vad är firestore', firestore)
@@ -9,8 +10,9 @@ import { firestoreReducer } from 'redux-firestore'
 
 const rootReducer = combineReducers({
     project: projektReducer,
-    firebase: firebaseReducer,
-    firestore: firestoreReducer
+    memoryApi: memoryApiReducer
+    //firebase: firebaseReducer,
+    //firestore: firestoreReducer
 
 
 })
