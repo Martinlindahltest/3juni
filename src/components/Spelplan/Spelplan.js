@@ -26,14 +26,18 @@ let kortClass = "kort mx-auto"
 
 let apiData = props.memoryApi.apiData
 
-let Row1 = [apiData[0].apiData, apiData[0].apiData, 3, 4]
-let Row2 = [5, 6, 7, 8]
-let Row3 = [9, 10, 11, 12]
-let Row4 = [13, 14, 15, 16]
+let Row1 = [apiData[0].apiData, apiData[0].apiData, apiData[1].apiData, apiData[1].apiData]
+let Row2 = [apiData[2].apiData, apiData[2].apiData, apiData[3].apiData, apiData[3].apiData]
+let Row3 = [apiData[4].apiData, apiData[4].apiData, apiData[5].apiData, apiData[5].apiData]
+let Row4 = [apiData[6].apiData, apiData[6].apiData, apiData[7].apiData, apiData[7].apiData]
 
     return (
         <div className="Spelplan">
 
+<button onClick={()=> {
+ props.changeArray()
+ console.log(props.changeArray)
+} }>Byt till apidataPushed</button>
 
       <div class="container">
         <div class="row">
@@ -138,7 +142,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
       hämtafråndatabas: () => {
           dispatch(actionCreator.apiFetch())
-      }
+      },
+      changeArray: () => {
+        dispatch(actionCreator.changeArray())
+    }
   }    
 }
 
