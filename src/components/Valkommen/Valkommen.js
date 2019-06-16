@@ -6,19 +6,14 @@ import * as actionCreator from "../../actions/memoryActions"
 
 
 function Valkommen(props) {
-    
-    if(props.memoryApi.apiData[0].apiData === 'Luke Skywalker'){
 
-    }
-    else {
+    if(props.memoryApi.apiFetchKlar === false){
         props.hämtafråndatabas()
-
-    }
+        //console.log('hej')
+      }
+    
     let Startknappklar = props.memoryApi.apiFetchKlar
 
-    if(false){
-        //Startknappklar = true
-    }
     console.log('Startknappklar', Startknappklar)
 
 

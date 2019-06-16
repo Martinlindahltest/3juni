@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import * as actionCreator from "../../actions/memoryActions"
+
 
 
  function Startknapp(props) {
@@ -7,11 +9,16 @@ import { connect } from 'react-redux'
     let Vy
 
     if(props.apiFetchKlar === true){
-        Vy = <div>Placeholder aktiv Startknapp</div>
+        Vy = <div> 
+            <button onClick={() => {
+                props.changeArrayAppview()
+            }}>aktiv Startknapp</button>
+        </div>
     }
     else {
-        Vy = <div>Placeholder passiv Startknapp</div>
-    }
+        Vy = <div> 
+        <button>passiv Startknapp</button>
+    </div>    }
 
     return (
         <div>
@@ -23,7 +30,18 @@ import { connect } from 'react-redux'
 const mapStateToProps = (state) => ({
     //projectPosts: state
     //helaState: state,
-    apiFetchKlar: state.memoryApi.apiFetchKlar
+    apiFetchKlar: state.memoryApi.apiFetchKlar,
   })
 
-export default connect(mapStateToProps)(Startknapp)
+  const mapDispatchToProps = (dispatch) => {
+    return {
+        changeArrayAppview: () => {
+          dispatch(actionCreator.changeArray())
+          dispatch(actionCreator.changeApplicationView())
+
+      }
+    }    
+  }
+  
+
+export default connect(mapStateToProps, mapDispatchToProps)(Startknapp)

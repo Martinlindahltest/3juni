@@ -4,6 +4,11 @@ export const changeArray = (input) => {
     return {type: 'CHANGE_ARRAY', payload: input}
 }
 
+export const changeApplicationView = (input) => {
+    console.log('nu körs CHANGE_APP_VIEW action', input)
+    return {type: 'CHANGE_APP_VIEW', payload: input}
+}
+
 export const fetchAsync = (input) => {
     console.log('nu körs FECHAsync action', input)
     return {type: 'FETCH', payload: input}
@@ -21,7 +26,6 @@ export const apiFetch = () => {
         fetchFunction(dispach, 'https://swapi.co/api/people/6')
         fetchFunction(dispach, 'https://swapi.co/api/people/7')
         fetchFunction(dispach, 'https://swapi.co/api/people/8')
-
     }
 }
 

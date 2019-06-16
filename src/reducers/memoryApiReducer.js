@@ -34,6 +34,10 @@ const memoryApiReducer = (state = initState, action) => {
                 newState.apiData[i].apiData = newState.apiDataPushed[i];
                 }
             break;
+            case 'CHANGE_APP_VIEW':
+            console.log('nu körs CHANGE_APP_VIEW i reducern')
+            newState.applicationView = 'spelplan'
+            break;
         default:
             console.log('MEMORY-API-REDUCER-DEFAULT ', action.type)
       }

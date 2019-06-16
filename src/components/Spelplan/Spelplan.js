@@ -16,10 +16,10 @@ import Kort from './Kort'
 
 //blanda array
 
-if(props.memoryApi.apiFetchKlar === false){
-  props.hämtafråndatabas()
+//if(props.memoryApi.apiFetchKlar === false){
+//  props.hämtafråndatabas()
   //console.log('hej')
-}
+//}
 
 let containerClass = "col-6 col-md-3 border p-2"
 let kortClass = "kort mx-auto"
@@ -33,11 +33,6 @@ let Row4 = [apiData[6].apiData, apiData[6].apiData, apiData[7].apiData, apiData[
 
     return (
         <div className="Spelplan">
-
-<button onClick={()=> {
- props.changeArray()
- console.log(props.changeArray)
-} }>Byt till apidataPushed</button>
 
       <div class="container">
         <div class="row">
