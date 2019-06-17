@@ -13,7 +13,7 @@ import Kort from './Kort'
 
 
 
-let containerClass = "col-6 col-md-3 border p-2"
+let containerClass = "col-6 col-md-3 p-2"
 let kortClass = "kort mx-auto"
 
 //vilka par ska skapas?
@@ -25,26 +25,75 @@ let antalKortDettaSpel = props.memoryApi.hurMangaPar * 0.5
 
 let vilkaKortDettaSpel = []
 
+let vilkaKortDettaSpelBlandad =[]
+
 for (let i = 0; i < antalKortDettaSpel; i++) {
   //console.log('nu körs forloopen', )
   vilkaKortDettaSpel.push(props.memoryApi.apiData[i])
 }
 
-console.log('vilkaKortDettaSpel', vilkaKortDettaSpel)
 
-//apiData = vilkaKortDettaSpel
+//blandfunktion
+
+function randomFunc(myArr) {      
+  var l = myArr.length, temp, index;  
+  while (l > 0) {  
+     index = Math.floor(Math.random() * l);  
+     l--;  
+     temp = myArr[l];          
+     myArr[l] = myArr[index];          
+     myArr[index] = temp;      
+  }    
+  return myArr;
+} 
+
+let ejblandadarray = vilkaKortDettaSpel
+
+vilkaKortDettaSpelBlandad = randomFunc(ejblandadarray)
+
+for (let i = 0; i < 8-antalKortDettaSpel; i++) {
+  //console.log('nu körs forloopen', )
+  vilkaKortDettaSpel.push({id: 99, apiData: 99})
+}
+
+console.log('vilkaKortDettaSpelBlandad', vilkaKortDettaSpelBlandad)
+
+apiData = vilkaKortDettaSpelBlandad
 
 
 
-//array av idn
+//array av 1-16
+let arrayAv116 = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7]
+
+let arrayAv116Blandad = randomFunc(arrayAv116)
+
+let a = arrayAv116Blandad[0]
+let b = arrayAv116Blandad[1]
+let c = arrayAv116Blandad[2]
+let d = arrayAv116Blandad[3]
+
+let e = arrayAv116Blandad[4]
+let f = arrayAv116Blandad[5]
+let g = arrayAv116Blandad[6]
+let h = arrayAv116Blandad[7]
+
+let i = arrayAv116Blandad[8]
+let j = arrayAv116Blandad[9]
+let k = arrayAv116Blandad[10]
+let l = arrayAv116Blandad[11]
+
+let m = arrayAv116Blandad[12]
+let n = arrayAv116Blandad[13]
+let o = arrayAv116Blandad[14]
+let p = arrayAv116Blandad[15]
 
 //blanda array
 
 
-let Row1 = [apiData[0].apiData, apiData[0].apiData, apiData[1].apiData, apiData[1].apiData]
-let Row2 = [apiData[2].apiData, apiData[2].apiData, apiData[3].apiData, apiData[3].apiData]
-let Row3 = [apiData[4].apiData, apiData[4].apiData, apiData[5].apiData, apiData[5].apiData]
-let Row4 = [apiData[6].apiData, apiData[6].apiData, apiData[7].apiData, apiData[7].apiData]
+let Row1 = [apiData[a].apiData, apiData[b].apiData, apiData[c].apiData, apiData[d].apiData]
+let Row2 = [apiData[e].apiData, apiData[f].apiData, apiData[g].apiData, apiData[h].apiData]
+let Row3 = [apiData[i].apiData, apiData[j].apiData, apiData[k].apiData, apiData[l].apiData]
+let Row4 = [apiData[m].apiData, apiData[n].apiData, apiData[o].apiData, apiData[p].apiData]
 
     return (
         <div className="Spelplan">

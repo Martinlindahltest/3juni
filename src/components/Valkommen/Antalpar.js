@@ -27,7 +27,7 @@ import * as actionCreator from "../../actions/memoryActions"
 
     return (
         <div>
-            Antal par placeholder
+            Antal kort att spela med
             <div onClick={() => handleClickUp()} className="knapp">KnappUpp</div>
             <div onClick={() => handleClickDown()} className="knapp">KnappNer</div>
 
