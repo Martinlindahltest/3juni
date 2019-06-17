@@ -9,6 +9,11 @@ export const changeApplicationView = (input) => {
     return {type: 'CHANGE_APP_VIEW', payload: input}
 }
 
+export const changeAntalPar = (input) => {
+    console.log('nu körs CHANGE_ANTAL_PAR action', input)
+    return {type: 'CHANGE_ANTAL_PAR', payload: input}
+}
+
 export const fetchAsync = (input) => {
     console.log('nu körs FECHAsync action', input)
     return {type: 'FETCH', payload: input}

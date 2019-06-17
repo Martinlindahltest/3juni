@@ -10,21 +10,36 @@ import Kort from './Kort'
 
  function Spelplan(props) {
 
+
+
+
+let containerClass = "col-6 col-md-3 border p-2"
+let kortClass = "kort mx-auto"
+
 //vilka par ska skapas?
+
+let apiData = props.memoryApi.apiData
+//console.log('apidata', apiData)
+
+let antalKortDettaSpel = props.memoryApi.hurMangaPar * 0.5
+
+let vilkaKortDettaSpel = []
+
+for (let i = 0; i < antalKortDettaSpel; i++) {
+  //console.log('nu körs forloopen', )
+  vilkaKortDettaSpel.push(props.memoryApi.apiData[i])
+}
+
+console.log('vilkaKortDettaSpel', vilkaKortDettaSpel)
+
+//apiData = vilkaKortDettaSpel
+
+
 
 //array av idn
 
 //blanda array
 
-//if(props.memoryApi.apiFetchKlar === false){
-//  props.hämtafråndatabas()
-  //console.log('hej')
-//}
-
-let containerClass = "col-6 col-md-3 border p-2"
-let kortClass = "kort mx-auto"
-
-let apiData = props.memoryApi.apiData
 
 let Row1 = [apiData[0].apiData, apiData[0].apiData, apiData[1].apiData, apiData[1].apiData]
 let Row2 = [apiData[2].apiData, apiData[2].apiData, apiData[3].apiData, apiData[3].apiData]

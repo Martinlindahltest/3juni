@@ -38,6 +38,10 @@ const memoryApiReducer = (state = initState, action) => {
             console.log('nu körs CHANGE_APP_VIEW i reducern')
             newState.applicationView = 'spelplan'
             break;
+            case 'CHANGE_ANTAL_PAR':
+                console.log('nu körs CHANGE_ANTAL_PAR i reducern AP', action.payload)
+                newState.hurMangaPar = newState.hurMangaPar + action.payload
+                break;
         default:
             console.log('MEMORY-API-REDUCER-DEFAULT ', action.type)
       }

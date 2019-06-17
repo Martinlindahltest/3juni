@@ -3,6 +3,7 @@ import Antalpar from './Antalpar'
 import Startknapp from './Startknapp'
 import { connect } from 'react-redux'
 import * as actionCreator from "../../actions/memoryActions"
+import './Valkommen.css'
 
 
 function Valkommen(props) {
@@ -18,7 +19,7 @@ function Valkommen(props) {
 
 
     return (
-        <div>
+        <div className='Valkommen'>
   <div>{props.memoryApi.apiData[0].apiData}</div>
 
 
