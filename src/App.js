@@ -7,10 +7,20 @@ import Valkommen from './components/Valkommen/Valkommen'
 import Grattis from './components/Grattis'
 
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
+
+
+
 
  function App(props) {
 
   let VilkenVy = <Valkommen />
+ 
+  library.add(faCheckSquare, faCoffee)
 
 
 if(props.AppView === 'spelplan'){
@@ -25,8 +35,12 @@ if(props.AppView === 'grattis'){
   //console.log('App', props.AppView) Spelplan
   return (
 <div >
+<FontAwesomeIcon icon="check-square" />
 
+    <FontAwesomeIcon icon="coffee"/>
  {VilkenVy}
+
+
 </div>
   )
 }

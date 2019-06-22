@@ -4,6 +4,11 @@ import './Antalpar.css'
 import * as actionCreator from "../../actions/memoryActions"
 import 'bootstrap/dist/css/bootstrap.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheckSquare, faCoffee, faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 
 
 
@@ -14,6 +19,9 @@ import 'bootstrap/dist/css/bootstrap.css';
     let containerClass = "border col-6 col-md-3 p-2"
 let BigContainerClass = "border col-12 col-md-6 p-2"
 //let FullContainerClass = "border col-12 col-md-12 p-2"
+
+library.add(faCheckSquare, faCoffee)
+
 
 
     function handleClickUp () {
@@ -42,12 +50,18 @@ let BigContainerClass = "border col-12 col-md-6 p-2"
           <div class={BigContainerClass}>
             <div className="">
                 <div className="">Antal kort att spela med</div> 
+
             </div>
           </div>
       
           <div class={containerClass}>
             <div>
-            <div onClick={() => handleClickUp()} className="knapp">KnappUpp</div>
+            <div onClick={() => handleClickUp()} className="knapp">
+              <FontAwesomeIcon icon="coffee"/>
+              <FontAwesomeIcon icon="arrow-up"/>
+
+              KnappUpp
+              </div>
             <div onClick={() => handleClickDown()} className="knapp">KnappNer</div>
             </div>
           </div>
