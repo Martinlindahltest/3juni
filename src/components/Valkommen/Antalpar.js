@@ -2,10 +2,19 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './Antalpar.css'
 import * as actionCreator from "../../actions/memoryActions"
+import 'bootstrap/dist/css/bootstrap.css';
+
+
+
 
 
 
  function Antalpar(props) {
+
+    let containerClass = "border col-6 col-md-3 p-2"
+let BigContainerClass = "border col-12 col-md-6 p-2"
+//let FullContainerClass = "border col-12 col-md-12 p-2"
+
 
     function handleClickUp () {
 
@@ -27,11 +36,31 @@ import * as actionCreator from "../../actions/memoryActions"
 
     return (
         <div>
-            Antal kort att spela med
+
+
+            <div class="row h-100 justify-content-center align-items-center">
+          <div class={BigContainerClass}>
+            <div className="">
+                <div className="">Antal kort att spela med</div> 
+            </div>
+          </div>
+      
+          <div class={containerClass}>
+            <div>
             <div onClick={() => handleClickUp()} className="knapp">KnappUpp</div>
             <div onClick={() => handleClickDown()} className="knapp">KnappNer</div>
+            </div>
+          </div>
+      
+      
+          <div class={containerClass}>
+            <div>             <span> {props.hurMangaPar}</span>
+ </div>
+          </div>
+      
+        </div>
 
-            <span> {props.hurMangaPar}</span>
+{/* Row 1 är slut */}
         </div>
     )
 }

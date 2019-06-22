@@ -4,6 +4,8 @@ import Startknapp from './Startknapp'
 import { connect } from 'react-redux'
 import * as actionCreator from "../../actions/memoryActions"
 import './Valkommen.css'
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 function Valkommen(props) {
@@ -15,6 +17,12 @@ function Valkommen(props) {
     
     let Startknappklar = props.memoryApi.apiFetchKlar
 
+    let containerClass = "border col-6 col-md-3 p-2"
+    let BigContainerClass = "border col-12 col-md-6 p-2"
+    let FullContainerClass = "border col-12 col-md-12 p-2"
+
+
+
     console.log('Startknappklar', Startknappklar)
 
 
@@ -24,9 +32,71 @@ function Valkommen(props) {
 
 
 
-            <h6>välkommen</h6>
-            <Antalpar />
-            <Startknapp />
+
+
+            <div>
+
+      <div class="container">
+        <div class="row">
+          <div class={containerClass}>
+            <div>ph</div>
+          </div>
+      
+          <div class={BigContainerClass}>
+            <div>            <h6>välkommen</h6>
+</div>
+          </div>
+      
+      
+          <div class={containerClass}>
+            <div>ph</div>
+          </div>
+      
+        </div>
+
+{/* Row 1 är slut */}
+
+<div class="row">
+          <div class={FullContainerClass}>
+            <div>            <Antalpar />
+</div>
+          </div>
+      
+    
+        </div>
+
+{/* Row 2 är slut */}
+
+<div class="row">
+          <div class={containerClass}>
+            <div>ph</div>
+          </div>
+      
+          <div class={BigContainerClass}>
+            <div>            
+              <Startknapp />
+            </div>
+          </div>
+    
+      
+          <div class={containerClass}>
+            <div>ph</div>
+          </div>
+      
+        </div>
+
+{/* Row 4 är slut */}
+
+        
+       
+
+
+
+
+        
+      </div>     
+
+      </div>
         </div>
     )
 }
